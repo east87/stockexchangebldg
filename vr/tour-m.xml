@@ -1,0 +1,20 @@
+<krpano version="1.19" title="Virtual Tour" onstart="startup2();">
+
+
+    <include url="skin/loadingbar.xml" />
+   <include url="panel-m.xml" />
+ 	<include url="blend.xml" />
+    <include url="skin/vtourskin.xml" />
+
+
+<action name="startup2">
+        loadpano(tour.xml);
+       set(layer[skin_layer1].visible, true);
+    </action>
+    
+
+
+</krpano>
+
+
+

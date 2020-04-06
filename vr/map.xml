@@ -1,0 +1,63 @@
+<krpano>
+
+<!-- 
+Note:
+Info Enable / Desable code placed on floorplan.xml 
+-->
+
+
+
+
+
+<layer name="infobutton1" keep="true"  url="images/daynight.png" align="centerright" X="-145" Y="0" zorder="12" crop="0|74|200|38" onclick="showinfo1()"
+onover="tween(layer[infobutton1].x,0);" onout="tween(layer[infobutton1].x,-145);"  />
+
+<layer name="info1"  url="images/info.png" align="centercenter" y="-1500" x="0" keep="true" zorder="2" onclick="hideinfo1()" />
+
+<!--
+<layer name="resort_map"  url="images/daynight.png" crop="0|75|220|40"  keep="true" zorder="25"   align="centerright"  X="-165"  Y="25"  onover="tween(layer[resort_map].x,0);"  
+onout="tween(layer[resort_map].x,-165);" onclick="openurl(http://applevisaservices.com/,_blank)"    />
+-->
+<action name="showinfo1">
+tween(layer[info1].y, 0);
+set(layer[infobutton1].onclick,hideinfo1());
+set(layer[infobutton1].crop,'0|119|200|38');
+hidemap();
+</action>
+
+<action name="hideinfo1">
+tween(layer[info1].y, -1500);
+set(layer[infobutton1].onclick,showinfo1());
+set(layer[infobutton1].crop,'0|74|200|38');
+</action>
+
+
+	<!--
+
+<layer name="mapbutton" keep="true"  url="images/infobutton1_ecard.png" align="rightcenter" X="-160" Y="50" zorder="12" crop="0|186|200|38" onclick="showmap()"
+onover="tween(layer[mapbutton].x,0);" onout="tween(layer[mapbutton].x,-160);"  />
+
+<layer name="map"  url="images/map.png" align="centercenter" y="-1500" x="0" keep="true" zorder="2" onclick="hidemap()" />
+
+
+
+
+<action name="showmap">
+tween(layer[map].y, 0);
+set(layer[mapbutton].onclick,hidemap());
+set(layer[mapbutton].crop,'0|223|200|38');
+hideinfo11();
+</action>
+
+<action name="hidemap">
+tween(layer[map].y, -1500);
+set(layer[mapbutton].onclick,showmap());
+set(layer[mapbutton].crop,'0|186|200|38');
+</action>	
+	
+	-->
+		
+
+
+
+</krpano>

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset='utf-8'> 
+<head>
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+<!-- META ===================================================== --> 
+    <title>First Jakarta International</title> 
+    <meta name="description" content="La Mira Villa welcomes you to the hidden oasis with a sense of coming home. Featuring 1 villa of Three Bedroom villa with private pool and bathtub, 3 villas of Two Bedroom Villa with Private Pool and Bathtub that can be converted to One Bedroom Villa with Private Pool and Bathtub which is completed with kitchen, living area, sunbed and signature villa facilities. La Mira Villa is suitable for your visit with group of friends or family and honeymooners are very welcome. Prime located in the hidden alley of Seminyak, takes 30 minutes’ drive away from I Gusti Ngurah Rai International Airport and only 10 minutes’ drive away to the sunset spot Batu Belig Beach, shopping street in Seminyak, cafes, restaurant and famous beach clubs in Seminyak that make your trip more memorable one in Bali."> 
+   
+
+<meta name="keywords" lang="en" content="Panomatics, Panomatics.com, Virtual tour, 360 Virtual tour, 360 Degree Panoromic virtual tours, Still images, Visually Exciting Content, Gallery, Video, Photo, Websites, Technology, Photography, Videos, Virtual Videos, 
+Media Products, 360 Degree tours, Time Lapses, Interactive Panorama, interactive 360° Panorama, Virtual Tour Technology Virtual Tour Website, Detail Images, P, Pano, Media Intergration" />
+
+
+<!-- shadowbox ===================================================== --> 
+<!--<link rel="stylesheet" type="text/css" href="shadow_box/shadowbox.css">
+<script type="text/javascript" src="shadow_box/shadowbox.js"></script>-->
+<!--<script type="text/javascript">
+Shadowbox.init({
+    handleOversize: "drag",
+    modal: true
+	 skipSetup: true
+});
+</script>-->
+<!-- shadowbox ===================================================== --> 
+
+
+<!-- CSS ====================================================== --> 
+	 <link rel="stylesheet" href="html_content/responsive_template/css/stylesheet.css">
+	<link rel="stylesheet" href="html_content/responsive_template/css/font-quattrocento.min.css">
+
+	<style>
+		@-ms-viewport { width: device-width; }
+		@media only screen and (min-device-width: 800px) { html { overflow:hidden; } }
+		html { height:100%; }
+		body { height:100%; overflow:auto; margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#FFFFFF; background-color:#000000; position:relative; }
+	</style>
+
+</head>
+<body>
+	<div class="main-nav" >
+<ul>
+        <li><a href="#">Main Areas</a>
+            <ul>
+            	<li><a href="#" class="closeonscene" onClick="loadscene('scene_aerial');" >AERIAL SCBD</a></li>
+            	<li><a href="#" class="closeonscene" onClick="loadscene('scene_aerialsudirman');" >AERIAL SUDIRMAN</a></li>
+                <li><a href="#" class="closeonscene" onClick="loadscene('scene_facade');" >Facade</a></li>
+                <li><a href="#" class="closeonscene" onClick="loadscene('scene_dropoffarea');" >Drop-Off Area</a></li>
+                <li><a href="#" class="closeonscene" onClick="loadscene('scene_mainlobby');" >Main Lobby</a></li>
+                <li><a href="#" class="closeonscene" onClick="loadscene('scene_tower1lobby');" >Tower 1 Lobby</a></li>
+                <li><a href="#" class="closeonscene" onClick="loadscene('scene_tower2lobby');" >Tower 2 Lobby</a></li>
+          		<li><a href="#" class="closeonscene" onClick="loadscene('scene_tower1_7thfloor');" >Tower 1 - 7th Floor</a></li>
+            </ul>
+        </li>	
+
+	 <li><a href="#">SCBD Entrances</a>
+            <ul>
+               <li><a href="#" class="closeonscene" onClick="loadscene('scene_gatosubroto-newscene');" >Gatot Subroto</a></li>
+               <li><a href="#" class="closeonscene" onClick="loadscene('scene_senopati-newscene');" >Senopati</a></li>
+               <li><a href="#" class="closeonscene" onClick="loadscene('scene_scbdentr_ance_sudirman1');" >Sudirman 1</a></li>
+               <li><a href="#" class="closeonscene" onClick="loadscene('scene_scbdentrance_sudirman2');" >Sudirman 2</a></li>
+               <li><a href="#" class="closeonscene" onClick="loadscene('scene_scbdentrance_widyachandra');" >Widya Chandra</a></li>
+   
+            </ul>
+        </li>
+
+</div>
+
+<div class="content">
+    
+    
+<div id="bgclor_logo">
+</div>    
+<div id="logo">
+<img src="images/logo_m.png" width="200" height="40">
+</div>
+
+    
+<div id="pano" style="width:100%; height:100%; position:fixed;">
+  <noscript><table style="width:100%;height:100%;"><tr style="valign:middle;"><td><div style="text-align:center;">ERROR:<br/><br/>Javascript not activated<br/><br/></div></td></tr></table></noscript></div>    
+</div>
+
+<!-- JS ======================================================= --> 
+<script type="text/javascript" src="html_content/responsive_template/js/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript" src="html_content/responsive_template/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="html_content/responsive_template/js/corefunctions.js"></script>
+<script type="text/javascript" src="html_content/responsive_template/js/responsivetables.min.js"></script>
+<script type="text/javascript">
+	$(window).load( function() {
+		$(document).responsiveTables();
+	});
+</script>
+
+<script src="tour.js"></script>
+<script>
+embedpano({swf:"tour.swf", xml:"tour-m.xml", target:"pano", html5:"prefer", wmode:"opaque" , passQueryParameters:true});
+
+	function krpano() 
+	{
+		return document.getElementById("krpanoSWFObject");
+	}
+    
+	function loadscene(panoname)
+	{
+		krpano().call("loadscene(" + panoname + ", null, MERGE, BLEND(1));");
+	}
+
+</script>
+
+
+
+<link rel="stylesheet" href="html_content/colorbox/colorbox.css" />
+<script src="html_content/colorbox/jquery.colorbox.js"></script>	
+
+<!-- add media queries for IE 8 -->
+<!--[if lte IE 8]>
+<script type="text/javascript" src="js/respond.min.js"></script>
+<![endif]-->
+</body>
+</html>

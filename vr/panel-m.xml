@@ -1,0 +1,129 @@
+<krpano>
+
+
+<action name="default_actions">
+
+closegalleryfacilities();
+hidepicfacilities();
+
+closegalleryaccomadation();
+hidepicaccomadation();
+
+
+hideallgallery();
+ 
+hide_all_sub_menu();
+hideallfloorplans();
+stoptween();
+addscenenames();
+hideallinfos();
+</action>
+
+
+
+<action name="global_actions">
+
+set(scene[scene_tower1_7thfloor].onstart,default_actions();show_sub_menu-1_1();tower1_fp_floorplan();activatespot(Tower1_area1,-61.10););
+set(scene[scene_tower1_7thfloor_area2].onstart,default_actions();show_sub_menu-1_1();tower1_fp_floorplan();activatespot(tower1_area2,-158.92););
+
+</action>
+
+<!-- sub_menu_panel Actions -->
+<action name="hide_all_sub_menu">
+
+hide_sub_menu-1_1();
+
+set(layer[menuholder].visible,0);
+</action>
+
+
+<action name="show_sub_menu-1_1">
+hide_all_sub_menu();
+set(plugin[sub_tab_1_1_1].visible,1);
+set(plugin[sub_tab_1_1_2].visible,1);
+
+set(layer[menuholder].visible,1);
+showsubmenu();
+</action>
+
+<action name="hide_sub_menu-1_1">
+set(plugin[sub_tab_1_1_1].visible,0);
+set(plugin[sub_tab_1_1_2].visible,0);
+
+</action>
+
+
+   <style name="menustyle" devices="all"
+	      url="%SWFPATH%/plugins/textfield.swf" children="false"
+	      height="20" align="center" edge="center" zorder="12"  Y="0" 
+	      background="false" borderwidth="0"  selectable="false"
+	      css="p{color:#ffffff; font-family:Helvetica; font-weight:bold; font-size:11.5px;  text-align:center; }" 
+		   />
+		   
+
+    <style name="textstyle" devices="flash"
+           url="%SWFPATH%/plugins/textfield.swf" keep="true" x="5" width="170"  height="22" visible="true" 
+           borderwidth="0" children="false"  background="false" backgroundcolor="0x9c7844"
+           handcursor="1" align="topleft" selectable="false"  
+           css="p{color:#888888; font-family:Helvetica; font-weight:normal; margin-left:10; font-size:14px;   text-align:left;}"
+           onhover="set(css,p{color:#ffffff; font-family:Helvetica; font-weight:normal; margin-left:10; font-size:14px;   text-align:left;}"
+           onout="set(css,p{color:#888888; font-family:Helvetica; font-weight:normal; margin-left:10; font-size:14px;   text-align:left;}"
+           />
+ 
+           
+           
+    <style name="textstyle" devices="html5"
+           url="%SWFPATH%/plugins/textfield.swf" keep="true" x="10" width="170"  height="22" visible="true" 
+           borderwidth="0" children="false"  background="false" backgroundcolor="0x9c7844"
+           handcursor="1" align="topleft" selectable="false" 
+           css="p{color:#ffffff; font-family:Helvetica; font-weight:normal; margin-left:10; font-size:14px;   text-align:left;}"
+           />
+
+      <style name="sub_textstyle" 
+           url="%SWFPATH%/plugins/textfield.swf" keep="true" height="25" visible="true" background="true" zorder="15" backgroundcolor="0x000001"
+           borderwidth="0" children="false" roundedge="3"  backgroundalpha="0.75"  
+           handcursor="1" align="topleft" selectable="true"  vcenter="true"
+           css="p{color:#ffffff; font-family:Thoma;  font-size:13px;  text-align:center; text-align:center; } "
+           onhover="set(css,p{color:#d1c9c9; font-family:Thoma;  font-size:13px;  text-align:center; text-align:center;})"
+           onout="set(css,p{color:#ffffff; font-family:Thoma;  font-size:13px;  text-align:center; text-align:center;})"
+            />   
+            
+    <style name="sub_menu" 
+           url="%SWFPATH%/plugins/textfield.swf" keep="true" height="30" visible="true" background="false" 
+           borderwidth="0" children="false" roundedge="3"  backgroundalpha="0.79"  
+           handcursor="1" align="center" selectable="fasle"  vcenter="true"
+           css="p{color:#424242; font-family:Arial; font-weight:regular; font-size:13px;  text-align:center;} "         
+            /> 
+	
+
+	<layer name="menuholder" align="topleft" type="container" keep="true" x="-175" y="70"  width="200" height="500" bgcolor="0x000000" bgalpha="0" >
+		
+<layer name="submenubar" align="topleft" type="container" keep="true" x="-20" y="0"  width="230" height="30" bgcolor="0xffffff" bgalpha="0.9"  >	
+	
+	<plugin name="submenu" style="sub_menu" y="0"  x="0"  html="[p]SUB MENU[/p]"   width="160" onclick="hidesubmenu()"   />
+ <plugin name="menuarrow" url="images/arrow.png"  keep="true" X="20" Y="0" align="rightcenter" rotate="180" edge="center" zorder="11" handcursor="1" onclick="showsubmenu()"  /> 	
+</layer>	
+
+
+
+
+	<plugin name="sub_tab_1_1_1" style="sub_textstyle" y="40"  x="30"  html="[p]Area 1[/p]"  width="120" onclick="loadscene(scene_tower1_7thfloor);hideall();" />     
+    <plugin name="sub_tab_1_1_2" style="sub_textstyle" y="70"  x="30"  html="[p]Area 2[/p]"  width="120" onclick="loadscene(scene_tower1_7thfloor_area2);hideall();" /> 
+
+</layer>
+	
+<action name="hidesubmenu">
+tween(layer[menuholder].x,-175);
+tween(layer[menuarrow].rotate,180);
+set(layer[menuarrow].onclick,showsubmenu());
+</action>
+
+<action name="showsubmenu">
+tween(layer[menuholder].x,20);
+tween(layer[menuarrow].rotate,0);
+set(layer[menuarrow].onclick,hidesubmenu());
+</action>
+
+
+
+</krpano>

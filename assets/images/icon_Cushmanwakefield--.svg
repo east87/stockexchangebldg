@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.204 64.75">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #030303;
+      }
+    </style>
+  </defs>
+  <g id="Group_1023" data-name="Group 1023" transform="translate(-516 -989.302)">
+    <path id="Path_541" data-name="Path 541" class="cls-1" d="M46.73,132.99v64.75H65.78V147.375Z" transform="translate(514.706 856.312)"/>
+    <path id="Path_542" data-name="Path 542" class="cls-1" d="M40.13,138.356v59.03h3.886V135.41Z" transform="translate(513.741 856.665)"/>
+    <path id="Path_543" data-name="Path 543" class="cls-1" d="M33.52,196.655h3.886V140.41l-3.886,2.934Z" transform="translate(512.774 857.396)"/>
+    <path id="Path_544" data-name="Path 544" class="cls-1" d="M26.91,195.925h3.9V145.4l-3.9,2.946Z" transform="translate(511.808 858.126)"/>
+    <path id="Path_545" data-name="Path 545" class="cls-1" d="M66.56,158.31v35.727H85.6V172.706Z" transform="translate(517.605 860.014)"/>
+    <path id="Path_546" data-name="Path 546" class="cls-1" d="M20.3,163.616v30.077h3.9V160.67Z" transform="translate(510.841 860.359)"/>
+    <path id="Path_547" data-name="Path 547" class="cls-1" d="M13.7,192.961h3.886V165.67L13.7,168.616Z" transform="translate(509.876 861.09)"/>
+    <path id="Path_548" data-name="Path 548" class="cls-1" d="M7.09,192.232h3.886V170.66L7.09,173.606Z" transform="translate(508.91 861.82)"/>
+  </g>
+</svg>

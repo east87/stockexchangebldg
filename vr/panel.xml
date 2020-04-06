@@ -1,0 +1,255 @@
+<krpano>
+
+
+<action name="default_actions">
+
+closegalleryfacilities();
+hidepicfacilities();
+
+closegalleryaccomadation();
+hidepicaccomadation();
+
+
+hideallgallery();
+ 
+hide_all_sub_menu();
+hideallfloorplans();
+stoptween();
+addscenenames();
+hideallinfos();
+</action>
+
+
+
+<action name="global_actions">
+
+set(scene[scene_tower1_7thfloor].onstart,default_actions();show_sub_menu-1_1();tower1_fp_floorplan();activatespot(Tower1_area1,13.17););
+set(scene[scene_tower1_7thfloor_area2].onstart,default_actions();show_sub_menu-1_1();tower1_fp_floorplan();activatespot(tower1_area2,-72.76););
+
+</action>
+
+
+
+
+<action name="show_scenes-1">
+hideall();
+tween(layer[pannel_bg1].y,5);
+set(layer[menu1].crop,'10|50|120|50');
+</action>
+
+<action name="show_scenes-2">
+hideall();
+tween(layer[pannel_bg2].y,5);
+set(layer[menu2].crop,'130|50|115|50');
+</action>
+
+
+<action name="show_scenes-3">
+hideall();
+tween(layer[pannel_bg3].y,5);
+set(layer[menu3].crop,'245|50|165|50');
+</action>
+
+<action name="show_scenes-4">
+hideall();
+tween(layer[pannel_bg4].y,5);
+set(layer[menu4].crop,'430|50|70|50');
+</action>
+
+
+
+
+<action name="hideall">
+tween(layer[pannel_bg1].y,-500);
+tween(layer[pannel_bg2].y,-500);
+tween(layer[pannel_bg3].y,-500);
+tween(layer[pannel_bg4].y,-500);
+
+set(layer[menu1].crop,'10|0|120|50');
+set(layer[menu2].crop,'130|0|115|50');
+ set(layer[menu3].crop,'245|0|165|50');
+<!--set(layer[menu4].crop,'430|0|70|50'); -->
+
+</action>
+
+
+<!-- sub_menu_panel Actions -->
+<action name="hide_all_sub_menu">
+
+hide_sub_menu-1_1();
+
+</action>
+
+
+<action name="show_sub_menu-1_1">
+hide_all_sub_menu();
+set(plugin[sub_tab_1_1_1].visible,1);
+set(plugin[sub_tab_1_1_2].visible,1);
+
+</action>
+
+<action name="hide_sub_menu-1_1">
+set(plugin[sub_tab_1_1_1].visible,0);
+set(plugin[sub_tab_1_1_2].visible,0);
+
+</action>
+
+
+
+
+
+<plugin name="header2" url="images/header2.png"  keep="true" X="0" Y="20" width="425" align="topright" zorder="11" handcursor="0"  /> 
+<style name="bottom" url="images/bottom.png"  keep="true" align="bottomleft" zorder="11" handcursor="1"  /> 
+<plugin name="logo" url="images/logo.png" scale="1" keep="true" X="20" Y="10"  align="topleft" edge="topleft" zorder="11" handcursor="0"  />
+
+
+<style name="panel_button" url="%SWFPATH%/images/panel_butt.png" keep="true" x="0" alpha="0" align="topleft"  onout="tween(alpha,0)"  />  
+<style name="panel_button2" url="%SWFPATH%/images/panel_butt.png" keep="true" x="0" alpha="0" align="topleft"  onout="tween(alpha,0)"  />  
+<style name="panel_button3" url="%SWFPATH%/images/panel_butt3.png" keep="true" x="0" alpha="0" align="topleft"  onout="tween(alpha,0)"  />  
+<style name="panel_button4" url="%SWFPATH%/images/panel_butt4.png" keep="true" x="0" alpha="0" align="topleft"  onout="tween(alpha,0)"  />  
+<style name="panel_button6" url="%SWFPATH%/images/panel_butt6.png" keep="true" x="0" alpha="0" align="topleft"  onout="tween(alpha,0)"  />  
+<style name="panel_button7" url="%SWFPATH%/images/panel_butt7.png" keep="true" x="0" alpha="0" align="topleft"  onout="tween(alpha,0)"  />  
+
+
+
+
+<!-- social_media -->
+<!--
+<plugin name="fb" url="images/social.png"  keep="true" X="50" Y="105"  align="topleft" edge="topleft" zorder="11" handcursor="1" crop="22|0|27|27"  onclick="openurl(https://www.facebook.com/samayaseminyak,_blank)" />
+<plugin name="tw" url="images/social.png"  keep="true" X="70" Y="105"  align="topleft" edge="topleft" zorder="11" handcursor="1" crop="49|0|27|27"  onclick="openurl(https://twitter.com/alilaseminyak,_blank)" />
+<plugin name="in" url="images/social.png"  keep="true" X="92" Y="105"  align="topleft" edge="topleft" zorder="11" handcursor="1" crop="76|0|27|27"  onclick="openurl(https://www.instagram.com/thesamayaseminyakbali/,_blank)" /> 
+<plugin name="moments"  url="images/social.png"  keep="true"   X="115"   Y="105"  align="topleft"   edge="topleft"   zorder="11"   handcursor="1" crop="130|0|25|27"  onclick="openurl(http://www.alilamoments.com/seminyak/happenings/,_blank)" />
+-->
+
+<!-- social_media -->
+
+    <style name="textstyle" devices="flash"
+           url="%SWFPATH%/plugins/textfield.swf" keep="true" x="5" width="170"  height="22" visible="true" 
+           borderwidth="0" children="false"  background="false" backgroundcolor="0x9c7844"
+           handcursor="1" align="topleft" selectable="false" 
+           css="p{color:#888888; font-family:MS Sans Serif-regular; font-weight:normal; margin-left:10; font-size:14px;   text-align:left;}"
+           onhover="set(css,p{color:#ffffff; font-family:MS Sans Serif-regular; font-weight:normal; margin-left:10; font-size:14px;   text-align:left;}"
+           onout="set(css,p{color:#888888; font-family:MS Sans Serif-regular; font-weight:normal; margin-left:10; font-size:14px;   text-align:left;}"
+           />
+
+    <style name="textstyle" devices="html5"
+           url="%SWFPATH%/plugins/textfield.swf" keep="true" x="25" width="170"  height="22" visible="true" 
+           borderwidth="0" children="false"  background="false" backgroundcolor="0x9c7844"
+           handcursor="1" align="topleft" selectable="false" 
+           css="p{color:#ffffff; font-family:Arial-regular; font-weight:normal; margin-left:10; font-size:14px;   text-align:left;}"
+           />
+
+   <style name="sub_textstyle" 
+           url="%SWFPATH%/plugins/textfield.swf" keep="true" height="25" visible="true" background="true" zorder="15" backgroundcolor="0x000001"
+           borderwidth="0" children="false" roundedge="3"  backgroundalpha="0.75"  
+           handcursor="1" align="topleft" selectable="true"  vcenter="true"
+           css="p{color:#ffffff; font-family:Thoma;  font-size:13px;  text-align:center; text-align:center; } "
+           onhover="set(css,p{color:#d1c9c9; font-family:Thoma;  font-size:13px;  text-align:center; text-align:center;})"
+           onout="set(css,p{color:#ffffff; font-family:Thoma;  font-size:13px;  text-align:center; text-align:center;})"
+            />   
+                                                        <!-- Set  Scene Names  -->
+
+ <style name="scenenames" 
+           url="%SWFPATH%/plugins/textfield.swf" keep="false"   height="25" visible="true" background="false"  backgroundcolor="0x282828"
+           borderwidth="0"  roundedge="0"  backgroundalpha="0.60" x="38" y="17"   autowidth="auto" zorder="1" 
+           handcursor="0" align="bottomleft" selectable="true"  vcenter="true"
+           css="p{color:#ffffff; font-family:Arial;  font-size:13px; margin-left:0;  text-align:center;} "           
+            />        
+            
+<plugin name="name_bg" keep="true" align="bottomleft"  url="images/name_bg.png" X="-10" Y="16" enabled="false" zorder="0" handcursor="0" />   
+
+
+
+<action name="addscenenames"> 
+set(scnma,get(scene[get(xml.scene)].title));
+txtadd(htmlnm,'[p]',get(scnma),'[/p]');
+addplugin(scnames);
+plugin[scnames].loadstyle(scenenames);  
+set(plugin[scnames].html,get(htmlnm));
+</action>
+
+
+                                            
+
+<plugin name="menu1" keep="true" parent="header2"  align="topleft" edge="topleft"  url="images/buttons.png" X="125" Y="0" zorder="12" crop="10|0|120|50"
+onovercrop="10|50|120|50" ondowncrop="10|50|120|50"    onover="show_scenes-1()" onout="hideall()"  onclick="show_scenes-1()"  />
+<!--
+<plugin name="menu2" keep="true" parent="header2"  align="topleft" edge="topleft"  url="images/buttons.png" X="125" Y="0" zorder="12" crop="130|0|115|50"
+onovercrop="130|50|115|50" ondowncrop="130|50|115|50"   onover="show_scenes-2()" onout="hideall()"  onclick="show_scenes-2()"  />
+-->
+<plugin name="menu3" keep="true" parent="header2"  align="topleft" edge="topleft"  url="images/buttons.png" X="245" Y="0" zorder="12" crop="245|0|165|50"
+onovercrop="245|50|165|50" ondowncrop="245|50|165|50"  onover="show_scenes-3()" onout="hideall()"  onclick="show_scenes-3()"   />
+
+
+
+<!--
+<plugin name="booknow" keep="true" parent="header2"  align="topright" edge="topright"  url="images/buttons.png" X="25" Y="0" zorder="12" crop="360|0|90|50"
+onovercrop="360|50|90|50"  onclick="openurl(https://bes.hybridbooking.com/wakabeachclub,_blank)"  /> 
+-->
+
+
+
+
+<layer name="pannel_box1" type="container" zorder="13"  keep="true" align="topright" x="190" y="65" width="170" height="250" maskchildren="true" handcursor="false"  >
+
+<layer name="pannel_bg1" devices="all" url="%SWFPATH%/images/pannel1.png" y="-500" align="topright"  x="0" keep="true" zorder="1" visible="1" onover="show_scenes-1()" onout="hideall()"  onclick="show_scenes-1()" >
+
+<layer name="ma-1" style="panel_button" y="22"    zorder="2" onover="show_scenes-1();tween(alpha,1)" onclick="loadscene(scene_aerial, null, MERGE,BLEND(1));" />
+<layer name="ma-2" style="panel_button" y="52"    zorder="2" onover="show_scenes-1();tween(alpha,1)" onclick="loadscene(scene_aerialsudirman, null, MERGE,BLEND(1));" />
+<layer name="ma-3" style="panel_button" y="78"    zorder="2" onover="show_scenes-1();tween(alpha,1)" onclick="loadscene(scene_facade, null, MERGE,BLEND(1));" />
+<layer name="ma-4" style="panel_button" y="108"   zorder="2" onover="show_scenes-1();tween(alpha,1)" onclick="loadscene(scene_dropoffarea, null, MERGE,BLEND(1));" />
+<layer name="ma-5" style="panel_button" y="137"   zorder="2" onover="show_scenes-1();tween(alpha,1)" onclick="loadscene(scene_mainlobby, null, MERGE,BLEND(1));" />
+<layer name="ma-6" style="panel_button" y="167"   zorder="2" onover="show_scenes-1();tween(alpha,1)" onclick="loadscene(scene_tower1lobby, null, MERGE,BLEND(1));" />
+<layer name="ma-7" style="panel_button" y="193"   zorder="2" onover="show_scenes-1();tween(alpha,1)" onclick="loadscene(scene_tower2lobby, null, MERGE,BLEND(1));" />
+<layer name="ma-8" style="panel_button" y="220"   zorder="2" onover="show_scenes-1();tween(alpha,1)" onclick="loadscene(scene_tower1_7thfloor, null, MERGE,BLEND(1));" />
+
+</layer>
+</layer>
+
+	<plugin name="sub_tab_1_1_1" style="sub_textstyle" y="180"  x="40"  html="[p]Area 1[/p]"  width="120" onclick="loadscene(scene_tower1_7thfloor);hideall();" />     
+    <plugin name="sub_tab_1_1_2" style="sub_textstyle" y="210"  x="40"  html="[p]Area 2[/p]"  width="120" onclick="loadscene(scene_tower1_7thfloor_area2);hideall();" /> 
+    
+<layer name="pannel_box2" type="container" zorder="13" keep="true" align="topright" x="195" y="65" width="170" height="150" maskchildren="true" handcursor="false"  >
+
+<layer name="pannel_bg2" devices="all" url="%SWFPATH%/images/pannel2.png" y="-500" align="topright"  x="0" keep="true" zorder="1" visible="1" onover="show_scenes-2()" onout="hideall()"  onclick="show_scenes-2()" >
+
+
+<layer name="a-1" style="panel_button" y="22" zorder="2" onover="show_scenes-2();tween(alpha,1)" onclick="loadscene(scene_tradingfloor, null, MERGE,BLEND(1));" />  
+<layer name="a-2" style="panel_button" y="52" zorder="2" onover="show_scenes-2();tween(alpha,1)" onclick="loadscene(scene_tower1_7thfloor, null, MERGE,BLEND(1));" />  
+<layer name="a-3" style="panel_button" y="78" zorder="2" onover="show_scenes-2();tween(alpha,1)" onclick="loadscene(scene_tower2_25thfloor, null, MERGE,BLEND(1));" />  
+</layer>
+</layer>
+
+
+
+
+<layer name="pannel_box3" type="container" zorder="13"  keep="true" align="topright" x="27" y="65" width="170" height="190" maskchildren="true" handcursor="false"  >
+
+<layer name="pannel_bg3" devices="all" url="%SWFPATH%/images/pannel3.png" y="-500" align="topright"  x="0" keep="true" zorder="1" visible="1" onover="show_scenes-3()" onout="hideall()"  onclick="show_scenes-3()" >
+
+<layer name="sb-1" style="panel_button" y="22"   zorder="2" onover="show_scenes-3();tween(alpha,1)" onclick="loadscene(scene_gatosubroto-newscene, null, MERGE,BLEND(1));" />
+<layer name="sb-2" style="panel_button" y="52"    zorder="2" onover="show_scenes-3();tween(alpha,1)" onclick="loadscene(scene_senopati-newscene, null, MERGE,BLEND(1));" />
+<layer name="sb-3" style="panel_button" y="78"   zorder="2" onover="show_scenes-3();tween(alpha,1)" onclick="loadscene(scene_scbdentr_ance_sudirman1, null, MERGE,BLEND(1));" />
+<layer name="sb-4" style="panel_button" y="108"   zorder="2" onover="show_scenes-3();tween(alpha,1)" onclick="loadscene(scene_scbdentrance_sudirman2, null, MERGE,BLEND(1));" />
+<layer name="sb-5" style="panel_button" y="137"   zorder="2" onover="show_scenes-3();tween(alpha,1)" onclick="loadscene(scene_scbdentrance_widyachandra, null, MERGE,BLEND(1));" />
+</layer>
+</layer>
+
+
+
+
+<!--
+<layer name="socialmediaicons" type="container" zorder="13" keep="true"  align="bottomright" x="0" y="35" width="150" height="32" maskchildren="true" handcursor="false"  >
+
+<layer name="fb" url="images/social.png" crop="0|0|35|32" align="topleft" x="-5" onclick="openurl(https://www.facebook.com/wakabeachclublembongan/,_blank);" />  
+
+<layer name="ins" url="images/social.png" crop="75|0|35|32" align="topleft" x="35"  onclick="openurl(https://www.instagram.com/wakabeachclub/,_blank);" />  
+
+<layer name="trip" url="images/social.png" crop="45|0|35|30" align="topleft" x="75"  onclick="openurl(https://twitter.com/wakabeachclub,_blank);" />  
+
+</layer>
+-->
+
+<plugin name="panomatics_base" url="skin/panomatics_base.png"  keep="true" X="5" Y="5"  align="bottomright" zorder="11" handcursor="1"  onclick="openurl(http://www.panomatics.com/,_blank);" /> 
+
+</krpano>

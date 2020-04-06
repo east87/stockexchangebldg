@@ -1,0 +1,128 @@
+.svg_icon h5 {
+    margin-top: 15px;
+    font-weight: 600!important;
+}
+div.right h5 {
+    
+    line-height: 21px;
+    font-weight: 600;
+}
+.feature h5 {
+    margin-bottom: 6px;
+    line-height: 35px;
+    font-weight: 600;
+}
+.feature strong {
+    color: rgba(102, 102, 102, 0.84);
+    line-height: 4px;
+    font-weight: 600;
+    padding-bottom: 12px;
+}
+
+.filled  p {
+    margin-top: 8px;
+    letter-spacing: 1px;
+    padding-top: 0px;
+    padding-right: 40px!important;
+    padding-bottom: 0px;
+    padding-left: 40px!important;
+}
+nav-bar .nav-open .logo-mobile{
+    display: none;
+}
+@media (min-width: 768px){
+    .feature-4 {
+    min-height: 75px!important;
+}
+}
+nav.transparent .logo-black {
+    display: none; 
+}
+@media (max-width: 990px){
+nav.transparent .nav-open .logo-black {
+      display: inline-block;
+    float: left;
+    margin-left: -20px!important;
+    width: 100%;
+    max-height: 75%;
+    margin-top: 6%; 
+  }
+  nav.transparent .nav-open .logo-mobile {
+       display: none!important;
+  }
+}
+@media (min-width: 991px){
+    .logo-mobile {
+    display: none!important;
+}
+
+
+}
+
+@media (max-width: 768px){
+    .btn-down {
+    top: calc(16vh - 1px)!important;
+    }
+    .logo-light{
+        display: none!important;
+    }
+    .logo-mobile{
+    display: inline-block;
+    float: left;
+    margin-left: -20px!important;
+    width: 100%;
+    max-height: 75%;
+    margin-top: 6%;   
+    }
+}
+
+ nav.transparent .nav-open .logo-dark {
+    margin-left: 1%!important;
+    width: 30%;
+    max-height: 78%!important;
+}   
+.btn-down{
+    position: absolute;
+    display: block;
+    visibility: visible;
+    /* transform: matrix(1, 0, 0, 1, 0, 0); */
+    /* left: 47%; */
+    top: calc(100vh - 54px);
+    z-index: 19;
+}
+
+.mouse {
+	max-width: 3rem;
+	width: 100%;
+	height: auto;
+}
+
+.scroll {
+	animation-name: scroll;
+	animation-duration: 1.5s;
+	animation-timing-function: cubic-bezier(0.650, -0.550, 0.250, 1.500);
+	animation-iteration-count: infinite;
+	transform-origin: 54% 20.5px;
+	will-change: transform, opacity;
+	opacity: 1;
+}
+
+.scroll-link {
+	position: absolute;
+	bottom: 1rem;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@keyframes scroll {
+
+	0%, 20% {
+		transform: translateY(0) scaleY(1);
+	}
+
+	100% {
+		transform: translateY(36px) scaleY(2);
+		opacity: 0;
+	}
+
+}

@@ -1,0 +1,239 @@
+﻿<krpano version="1.19" title="Virtual Tour">
+
+<!-- Sample Blend Script use seconds if required blend(seconds),"blend(7)" -->
+<!-- <events name="blend" onloadcomplete="blendhotspot(pano_name);blend()"/>     -->
+<!-- <events name="blend_mul3" onloadcomplete="blendhotspot_mul3(pano_name1,pano_name2);blend_mul3());"/> -->
+<!-- <events name="blend_mul4" onloadcomplete="blendhotspot_mul4(pano_name1,pano_name2,pano_name3);blend_mul4());"/> -->
+
+	
+	<!-- startup action - load the first scene -->
+	<action name="startup" autorun="onstart">
+		global_actions();
+		default_actions();
+		if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
+		loadscene(get(startscene), null, MERGE);
+		if(startactions !== null, startactions() );
+		set(heading, -53);
+	</action>
+
+<include url="%SWFPATH%/plugins/showtext.xml" />
+		
+	<autorotate enabled="true"
+            waittime="5.0"
+            accel="1.0"
+            speed="3.0"
+            horizon="0.0"
+            tofov="off"
+            />
+        
+         <display fps="60"
+         details="16"
+         tessmode="-1"
+         movequality="HIGH"
+         stillquality="HIGH"
+         flash10="on"
+         movequality10="HIGH"
+         stillquality10="HIGH"
+         sharpen="12"
+         stilltime="0.25"
+         showpolys="false"
+         />	
+
+	
+ 
+ 
+ 	<scene name="scene_facade" title="Facade" onstart="default_actions()" thumburl="panos/facadeday.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-40.917" vlookat="-6.739" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/facadeday.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/facadeday.tiles/pano_%s.jpg" />
+		</image>
+
+			<events name="blend" onloadcomplete="blendhotspot(facade_night);blend()"/>
+			
+	</scene>
+ 
+	
+	<scene name="scene_dropoffarea" title="Drop-Off Area" onstart="default_actions()" thumburl="panos/dropoffarea.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-26.066" vlookat="4.273" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/dropoffarea.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/dropoffarea.tiles/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+
+
+	<scene name="scene_mainlobby" title="Main Lobby" onstart="default_actions()" thumburl="panos/mainlobby.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="69.535" vlookat="-0.808" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/mainlobby.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/mainlobby.tiles/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	
+	
+		<scene name="scene_tower1lobby" title="Tower 1 Lobby" onstart="default_actions()" thumburl="panos/tower1lobby.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="141.502" vlookat="0.980" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/tower1lobby.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/tower1lobby.tiles/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_tower2lobby" title="Tower 2 Lobby" onstart="default_actions()" thumburl="panos/tower2lobby.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="140.169" vlookat="-1.792" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/tower2lobby.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/tower2lobby.tiles/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	
+	
+	
+	
+	<scene name="scene_tradingfloor" title="Trading Floor" onstart="default_actions()" thumburl="panos/tradingfloor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-119.254" vlookat="5.318" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/tradingfloor.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/tradingfloor.tiles/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+
+	
+	
+	
+	<scene name="scene_tower1_7thfloor" title="Tower 1 - 7th Floor" onstart="default_actions()" thumburl="panos/tower1_7thfloor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="130.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/tower1_7thfloor.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/tower1_7thfloor.tiles/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_tower2_25thfloor" title="Tower 2 - 25th Floor" onstart="default_actions()" thumburl="panos/tower2_25thfloor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/tower2_25thfloor.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/tower2_25thfloor.tiles/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	
+	
+		<scene name="scene_scdbentrance_gatosubroto" title="Gato Subroto" onstart="default_actions()" thumburl="panos/scdbentrance_gatosubroto.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-130.804" vlookat="-1.058" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/scdbentrance_gatosubroto.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/scdbentrance_gatosubroto.tiles/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	
+		<scene name="scene_scbdentrance_senopati" title="Senopati" onstart="default_actions()" thumburl="panos/scbdentrance_senopati.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="276.051" vlookat="-7.188" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/scbdentrance_senopati.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/scbdentrance_senopati.tiles/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	
+	
+	
+	
+	
+
+	<scene name="scene_scbdentr_ance_sudirman1" title="Sudirman 1" onstart="default_actions()" thumburl="panos/scbdentr_ance_sudirman1.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-0.633" vlookat="-0.914" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/scbdentr_ance_sudirman1.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/scbdentr_ance_sudirman1.tiles/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+
+
+	<scene name="scene_scbdentrance_sudirman2" title="Sudirman 2" onstart="default_actions()" thumburl="panos/scbdentrance_sudirman2.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="55.348" vlookat="-8.614" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/scbdentrance_sudirman2.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/scbdentrance_sudirman2.tiles/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_scbdentrance_widyachandra" title="Widya Chandra" onstart="default_actions()" thumburl="panos/scbdentrance_widyachandra.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="266.896" vlookat="-0.123" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/scbdentrance_widyachandra.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/scbdentrance_widyachandra.tiles/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+
+
+
+
+
+<plugin name="serverinfo" url="http://s3-ap-southeast-1.amazonaws.com/dev.panomatics/2016/serverinfo.png"  keep="true" X="0" Y="5" autoalpha="1"  align="center" zorder="11" handcursor="1" onclick="tween(plugin[serverinfo].alpha,0)"   /> 
+
+<contextmenu versioninfo="false">  
+<item name="fsc" caption="FULLSCREEN" />        
+<item caption="Panomatics.com"   onclick="openurl(http://www.panomatics.com/,_blank);"  />   
+</contextmenu>
+
+</krpano>
